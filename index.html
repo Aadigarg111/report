@@ -127,6 +127,72 @@
             font-size: 0.8em;
             color: #666;
         }
+        .chart-container {
+            margin: 2em 0;
+            text-align: center;
+        }
+        .chart {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .image-container {
+            margin: 2em 0;
+            text-align: center;
+        }
+        .office-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+        .image-caption {
+            margin-top: 1em;
+            font-style: italic;
+            color: #666;
+            font-size: 0.9em;
+        }
+        .stats-container {
+            margin: 2em 0;
+            padding: 1.5em;
+            background: #f8f9fa;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5em;
+            margin-top: 1em;
+        }
+        .stat-item {
+            text-align: center;
+            padding: 1em;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .stat-number {
+            display: block;
+            font-size: 2em;
+            font-weight: bold;
+            color: #0078d4;
+            margin-bottom: 0.2em;
+        }
+        .stat-label {
+            display: block;
+            color: #666;
+            font-size: 0.9em;
+        }
+        @media screen and (max-width: 768px) {
+            .stat-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+            .stat-number {
+                font-size: 1.5em;
+            }
+        }
         .header-line {
             border-top: 2px solid #0078d4;
             width: 100%;
@@ -273,20 +339,20 @@
                 
                 <div class="student-info">
                     <p><strong>Submitted By:</strong><br>
-                    [Student Name]<br>
-                    [Roll Number]<br>
-                    [Department]</p>
+                    Aadi<br>
+                    11015603123<br>
+                    Information Technology</p>
                     
                     <p><strong>Submitted To:</strong><br>
-                    [Faculty Name]<br>
-                    [Department]</p>
+                    Ms. Jaya Singh Mam<br>
+                    IT</p>
                     
                     <p><strong>Institution Name</strong><br>
-                    [College/University Name]<br>
-                    [Address]</p>
+                    Dr. Akhilesh Das Gupta Institute of Professional Studies<br>
+                    New Delhi</p>
                     
                     <p><strong>Date of Visit</strong><br>
-                    [Date]</p>
+                    February 15, 2024</p>
                 </div>
             </div>
             <div class="page-number">1</div>
@@ -298,13 +364,13 @@
                 <h1>Certificate</h1>
                 <div class="header-line"></div>
                 <p class="text-left" style="margin-top: 3em;">
-                    This is to certify that <strong>[Student Name]</strong> of <strong>[Department]</strong>, <strong>[College/University Name]</strong> has successfully completed the Industrial Visit to Microsoft Corporation's Noida Office on <strong>[Date]</strong>. The visit was part of the curriculum to expose students to real-world industry practices and enhance their understanding of technological implementations in corporate settings.
+                    This is to certify that <strong>Aadi</strong> of <strong>Information Technology</strong>, <strong>Dr. Akhilesh Das Gupta Institute of Professional Studies</strong> has successfully completed the Industrial Visit to Microsoft Corporation's Noida Office on <strong>February 15, 2024</strong>. The visit was part of the curriculum to expose students to real-world industry practices and enhance their understanding of technological implementations in corporate settings.
                 </p>
                 
                 <p class="text-left" style="margin-top: 5em;">
-                    [Faculty Name]<br>
-                    [Department]<br>
-                    [College/University Name]
+                    Ms. Jaya Singh Mam<br>
+                    IT<br>
+                    Dr. Akhilesh Das Gupta Institute of Professional Studies
                 </p>
             </div>
             <div class="page-number">2</div>
@@ -458,24 +524,33 @@
                     <li><strong>Diversity and Inclusion</strong>: Microsoft Noida has implemented several initiatives to promote diversity, with women constituting approximately 35% of the workforce, significantly higher than the industry average in India.</li>
                 </ol>
                 
-                <h3>Growth of Microsoft Noida Office (2005-2023)</h3>
-                <table>
-                    <tr>
-                        <th>Year</th>
-                        <th>Number of Employees</th>
-                        <th>Office Space (sq ft)</th>
-                        <th>Projects Handled</th>
-                    </tr>
-                    <tr>
-                        <td>2005</td>
-                        <td>150</td>
-                        <td>20,000</td>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <td>2010</td>
-                        <td>750</td>
-                        <td>50,000</td>
+                <h3>Growth of Microsoft Noida Office</h3>
+                <div class="chart-container">
+                    <img src="https://quickchart.io/chart?c={type:'line',data:{labels:['2005','2010','2015','2020','2023'],datasets:[{label:'Employees',data:[150,750,2000,8000,18000],borderColor:'#0078d4',fill:false},{label:'Office Space (sq ft)',data:[20000,50000,75000,100000,150000],borderColor:'#28a745',fill:false}]},options:{title:{display:true,text:'Microsoft Noida Growth Trends'},scales:{y:{beginAtZero:true}}}}" alt="Microsoft Noida Growth Chart" class="chart">
+                </div>
+
+                <div class="image-container">
+                    <img src="https://th-i.thgim.com/public/incoming/1at0ta/article69312052.ece/alternates/LANDSCAPE_1200/MSN-Aerial-view-1536x864.jpg" alt="Microsoft Noida Office" class="office-image">
+                    <p class="image-caption">Microsoft's Taj Mahal-inspired IDC Noida Campus</p>
+                </div>
+
+                <div class="stats-container">
+                    <h4>Current Statistics (2023)</h4>
+                    <div class="stat-grid">
+                        <div class="stat-item">
+                            <span class="stat-number">18,000+</span>
+                            <span class="stat-label">Employees</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">150,000</span>
+                            <span class="stat-label">Sq ft Office Space</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">100+</span>
+                            <span class="stat-label">Active Projects</span>
+                        </div>
+                    </div>
+                </div>
                         <td>15</td>
                     </tr>
                     <tr>
