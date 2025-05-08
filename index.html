@@ -16,8 +16,8 @@
         .container {
             max-width: 210mm;
             min-height: 297mm;
-            margin: 20px auto;
-            padding: 20mm;
+            margin: 10px auto;
+            padding: 15px;
             box-sizing: border-box;
             background-color: white;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -25,6 +25,28 @@
             flex-direction: column;
             justify-content: center;
             position: relative;
+        }
+        @media screen and (max-width: 768px) {
+            .container {
+                margin: 0;
+                padding: 10px;
+                min-height: auto;
+            }
+            h1 { font-size: 1.8em; }
+            h2 { font-size: 1.5em; }
+            h3 { font-size: 1.3em; }
+            .content { padding: 10px; }
+            .logo { width: 150px; }
+            table { overflow-x: auto; display: block; }
+            .student-info { margin: 1em 0; }
+            .page-number { bottom: 5mm; right: 5mm; }
+        }
+        @media screen and (max-width: 480px) {
+            h1 { font-size: 1.5em; }
+            h2 { font-size: 1.3em; }
+            h3 { font-size: 1.1em; }
+            p { font-size: 0.9em; }
+            .logo { width: 120px; }
         }
         .content {
             max-width: 170mm;
@@ -122,16 +144,30 @@
             margin-top: 20px;
             padding: 10px 0;
             border-top: 1px solid #ddd;
+            flex-wrap: wrap;
+            gap: 10px;
         }
         .nav-button {
             background-color: #0078d4;
             color: white;
             border: none;
-            padding: 10px 20px;
+            padding: 8px 15px;
             border-radius: 4px;
             cursor: pointer;
             font-weight: bold;
             transition: background-color 0.3s;
+            flex: 1;
+            min-width: 120px;
+            text-align: center;
+        }
+        @media screen and (max-width: 480px) {
+            .navigation {
+                flex-direction: column;
+            }
+            .nav-button {
+                width: 100%;
+                margin: 5px 0;
+            }
         }
         .nav-button:hover {
             background-color: #005a9e;
