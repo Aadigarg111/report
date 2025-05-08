@@ -145,12 +145,74 @@
             align-items: center;
             color: #666;
         }
+        .index-content {
+            margin: 2em 0;
+        }
+        .index-content ol {
+            list-style-type: decimal;
+            padding-left: 1.5em;
+        }
+        .index-content ul {
+            list-style-type: disc;
+            padding-left: 2em;
+            margin: 0.5em 0;
+        }
+        .index-content a {
+            color: #0078d4;
+            text-decoration: none;
+        }
+        .index-content a:hover {
+            text-decoration: underline;
+        }
+        @media print {
+            .page {
+                page-break-after: always;
+                display: block !important;
+            }
+            .navigation {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
+        <!-- Index Page -->
+        <div class="page active" id="page0">
+            <div class="content">
+                <h1>Table of Contents</h1>
+                <div class="header-line"></div>
+                <div class="index-content">
+                    <ol>
+                        <li><a href="#page1">Cover Page</a></li>
+                        <li><a href="#page2">Certificate</a></li>
+                        <li><a href="#page3">Abstract</a></li>
+                        <li><a href="#page4">Introduction</a>
+                            <ul>
+                                <li>About Microsoft Corporation</li>
+                                <li>Microsoft India Development Center (IDC), Noida</li>
+                                <li>Purpose of the Visit</li>
+                            </ul>
+                        </li>
+                        <li><a href="#page5">Case Study/Data Analysis & Findings</a>
+                            <ul>
+                                <li>Case Study 1: Azure Cloud Services Implementation</li>
+                                <li>Case Study 2: AI-Powered Healthcare Solutions</li>
+                            </ul>
+                        </li>
+                        <li><a href="#page7">Key Findings</a></li>
+                        <li><a href="#page8">Outcome</a></li>
+                        <li><a href="#page9">Conclusion</a></li>
+                        <li><a href="#page10">Acknowledgments</a></li>
+                        <li><a href="#page11">References</a></li>
+                    </ol>
+                </div>
+            </div>
+            <div class="page-number">i</div>
+        </div>
+
         <!-- Page 1: Cover Page -->
-        <div class="page active" id="page1">
+        <div class="page" id="page1">
             <div class="content">
                 <h1>INDUSTRIAL VISIT REPORT</h1>
                 <h2>MICROSOFT CORPORATION NOIDA OFFICE</h2>
@@ -222,8 +284,6 @@
                 <p>
                     The Microsoft India Development Center in Noida, established in 2005, is one of Microsoft's largest R&D centers outside the United States. The facility spans approximately 150,000 square feet and houses over 3,000 employees working across various technology domains. The Noida campus is known for its contributions to Microsoft's global products and services, including cloud computing, artificial intelligence, and business applications.
                 </p>
-                
-                <img src="https://www.microsoft.com/en-in/about/india/overview/images/noida-campus.jpg" alt="Microsoft Noida Office">
                 
                 <h3>Purpose of the Visit</h3>
                 <div class="objectives">
@@ -321,7 +381,6 @@
                 </ol>
                 
                 <h4>Results</h4>
-                <img src="https://www.microsoft.com/en-us/ai/ai-for-health/images/healthcare-ai-chart.jpg" alt="AI Diagnostic Accuracy Chart">
                 <p>The AI solution achieved:</p>
                 <ul>
                     <li>91% accuracy in detecting diabetic retinopathy</li>
@@ -329,48 +388,22 @@
                     <li>Ability to screen 1,000+ patients daily</li>
                     <li>Deployment across 15 hospitals serving rural communities</li>
                 </ul>
-                
-                <h3>Key Findings from the Visit</h3>
-                <ol>
-                    <li><strong>Agile Development Practices</strong>: Microsoft Noida implements Agile methodologies across all projects, with two-week sprint cycles and daily stand-up meetings to ensure continuous progress and quick adaptation to changes.</li>
-                    <li><strong>DevOps Integration</strong>: The development teams use a comprehensive DevOps pipeline that automates testing, deployment, and monitoring, resulting in faster release cycles and improved software quality.</li>
-                </ol>
             </div>
             <div class="page-number">6</div>
         </div>
 
-        <!-- Page 7: Key Findings & Evidence -->
+        <!-- Page 7: Key Findings -->
         <div class="page" id="page7">
             <div class="content text-left">
-                <ol start="3">
+                <h1 class="text-center">Key Findings from the Visit</h1>
+                <div class="header-line"></div>
+                <ol>
+                    <li><strong>Agile Development Practices</strong>: Microsoft Noida implements Agile methodologies across all projects, with two-week sprint cycles and daily stand-up meetings to ensure continuous progress and quick adaptation to changes.</li>
+                    <li><strong>DevOps Integration</strong>: The development teams use a comprehensive DevOps pipeline that automates testing, deployment, and monitoring, resulting in faster release cycles and improved software quality.</li>
                     <li><strong>Collaborative Workspace Design</strong>: The office is designed to promote collaboration with open workspaces, numerous meeting rooms equipped with advanced conferencing technology, and informal gathering areas for spontaneous discussions.</li>
                     <li><strong>Focus on Innovation</strong>: Employees are encouraged to spend 20% of their time on innovation projects outside their regular responsibilities, which has led to several new features in Microsoft products.</li>
                     <li><strong>Diversity and Inclusion</strong>: Microsoft Noida has implemented several initiatives to promote diversity, with women constituting approximately 35% of the workforce, significantly higher than the industry average in India.</li>
                 </ol>
-                
-                <h1 class="text-center">Evidence - Images, Tables, Charts, Illustrations</h1>
-                <div class="header-line"></div>
-                
-                <h3>Microsoft Noida Campus</h3>
-                <img src="https://www.microsoft.com/en-in/about/india/overview/images/noida-exterior.jpg" alt="Microsoft Noida Campus Exterior">
-                <p>The state-of-the-art Microsoft Noida campus features modern architecture with emphasis on sustainability and employee well-being.</p>
-                
-                <h3>Collaborative Workspace</h3>
-                <img src="https://www.microsoft.com/en-in/about/india/overview/images/collaborative-workspace.jpg" alt="Collaborative Workspace">
-                <p>The open workspace design promotes collaboration and communication among team members.</p>
-            </div>
-            <div class="page-number">7</div>
-        </div>
-
-        <!-- Page 8: Evidence Continued -->
-        <div class="page" id="page8">
-            <div class="content text-left">
-                <h3>Technology Showcase Area</h3>
-                <img src="https://www.microsoft.com/en-in/about/india/overview/images/technology-showcase.jpg" alt="Technology Showcase">
-                <p>The technology showcase area where visitors can experience the latest Microsoft products and innovations.</p>
-                
-                <h3>Employee Distribution by Department</h3>
-                <img src="https://www.microsoft.com/en-in/about/india/overview/images/department-distribution.png" alt="Department Distribution Pie Chart">
                 
                 <h3>Growth of Microsoft Noida Office (2005-2023)</h3>
                 <table>
@@ -411,16 +444,12 @@
                         <td>85</td>
                     </tr>
                 </table>
-                
-                <h3>Microsoft India Revenue Contribution</h3>
-                <img src="https://www.microsoft.com/en-in/about/india/overview/images/revenue-contribution.png" alt="Revenue Contribution Graph">
-                <p>The graph shows the increasing contribution of Microsoft India operations to global revenue.</p>
             </div>
-            <div class="page-number">8</div>
+            <div class="page-number">7</div>
         </div>
 
-        <!-- Page 9: Outcome -->
-        <div class="page" id="page9">
+        <!-- Page 8: Outcome -->
+        <div class="page" id="page8">
             <div class="content text-left">
                 <h1 class="text-center">Outcome</h1>
                 <div class="header-line"></div>
@@ -447,21 +476,12 @@
                     <li><strong>Project Ideas</strong>: Students gained inspiration for final year projects based on real-world problems being addressed by Microsoft.</li>
                 </ol>
             </div>
-            <div class="page-number">9</div>
+            <div class="page-number">8</div>
         </div>
 
-        <!-- Page 10: Student Feedback & Conclusion -->
-        <div class="page" id="page10">
+        <!-- Page 9: Conclusion -->
+        <div class="page" id="page9">
             <div class="content text-left">
-                <h3>Student Feedback</h3>
-                <p>A survey conducted among the participating students after the visit revealed:</p>
-                <ul>
-                    <li>92% rated the visit as "highly valuable" to their educational experience</li>
-                    <li>85% reported increased interest in pursuing careers in software development or cloud computing</li>
-                    <li>78% felt more confident about their career prospects after understanding industry expectations</li>
-                    <li>90% recommended continuing such industrial visits as part of the curriculum</li>
-                </ul>
-                
                 <h1 class="text-center">Conclusion</h1>
                 <div class="header-line"></div>
                 <p>
@@ -476,13 +496,7 @@
                     <li><strong>Career Opportunities</strong>: The diverse roles and projects at Microsoft Noida showcased the wide range of career opportunities available in the technology sector.</li>
                     <li><strong>Global Impact</strong>: Understanding how work done at the Noida office contributes to Microsoft's global products and services gave students perspective on the international nature of the technology industry.</li>
                 </ol>
-            </div>
-            <div class="page-number">10</div>
-        </div>
-
-        <!-- Page 11: Conclusion Continued & Acknowledgments -->
-        <div class="page" id="page11">
-            <div class="content text-left">
+                
                 <p>
                     This industrial visit has significantly contributed to the holistic development of students by complementing theoretical knowledge with practical exposure. The experience will undoubtedly influence their academic focus and career choices, preparing them better for future professional challenges.
                 </p>
@@ -490,7 +504,13 @@
                 <p>
                     The continued collaboration between educational institutions and industry leaders like Microsoft is essential for preparing students for the rapidly evolving technology landscape and ensuring they remain competitive in the global job market.
                 </p>
-                
+            </div>
+            <div class="page-number">9</div>
+        </div>
+
+        <!-- Page 10: Acknowledgments -->
+        <div class="page" id="page10">
+            <div class="content text-left">
                 <h1 class="text-center">Acknowledgments</h1>
                 <div class="header-line"></div>
                 <p>We would like to express our sincere gratitude to:</p>
@@ -502,11 +522,11 @@
                     <li>All the students who participated enthusiastically and maintained professional decorum during the visit</li>
                 </ul>
             </div>
-            <div class="page-number">11</div>
+            <div class="page-number">10</div>
         </div>
 
-        <!-- Page 12: References -->
-        <div class="page" id="page12">
+        <!-- Page 11: References -->
+        <div class="page" id="page11">
             <div class="content text-left">
                 <h1 class="text-center">References</h1>
                 <div class="header-line"></div>
@@ -520,7 +540,7 @@
                     </ol>
                 </div>
             </div>
-            <div class="page-number">12</div>
+            <div class="page-number">11</div>
         </div>
 
         <!-- Navigation buttons -->
@@ -552,7 +572,7 @@
                 pages[index].classList.add('active');
                 
                 // Update current page indicator
-                currentPageSpan.textContent = index + 1;
+                currentPageSpan.textContent = index === 0 ? 'i' : index;
                 
                 // Update button states
                 prevBtn.disabled = index === 0;
@@ -572,6 +592,20 @@
                     currentPageIndex++;
                     showPage(currentPageIndex);
                 }
+            });
+            
+            // Handle anchor links
+            document.querySelectorAll('.index-content a').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = link.getAttribute('href').substring(1);
+                    const targetPage = document.getElementById(targetId);
+                    const targetIndex = Array.from(pages).indexOf(targetPage);
+                    if (targetIndex !== -1) {
+                        currentPageIndex = targetIndex;
+                        showPage(currentPageIndex);
+                    }
+                });
             });
             
             // Initialize with the first page
