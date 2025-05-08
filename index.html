@@ -144,8 +144,11 @@
             margin-top: 20px;
             padding: 10px 0;
             border-top: 1px solid #ddd;
-            flex-wrap: wrap;
             gap: 10px;
+            position: sticky;
+            top: 0;
+            background: white;
+            z-index: 100;
         }
         .nav-button {
             background-color: #0078d4;
@@ -162,11 +165,25 @@
         }
         @media screen and (max-width: 480px) {
             .navigation {
-                flex-direction: column;
+                flex-direction: row;
+                justify-content: center;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                padding: 5px;
+                background: white;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                z-index: 100;
             }
             .nav-button {
-                width: 100%;
-                margin: 5px 0;
+                flex: 0 1 auto;
+                min-width: auto;
+                padding: 6px 12px;
+                font-size: 0.9em;
+            }
+            .container {
+                margin-top: 50px;
             }
         }
         .nav-button:hover {
